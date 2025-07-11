@@ -65,7 +65,11 @@ class ProjectInput {
     }
   }
 
-
+  private clearInputs() {
+    this.titleInputElement.value = ''
+    this.descriptionInputElement.value = ''
+    this.peopleInputElement.value = ''
+  }
 
   @autobind
   private submitHandler(event: Event) {
