@@ -74,7 +74,12 @@ class ProjectInput {
   @autobind
   private submitHandler(event: Event) {
     event.preventDefault()
-    console.log(this.titleInputElement.value)
+    const userInput = this.gatherUserInput()
+    if (Array.isArray(userInput)) {
+      const [title, description, people] = userInput
+      console.log(title, description, people)
+      this.clearInputs()
+    }
   }
 
   private configure() {
