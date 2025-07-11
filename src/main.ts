@@ -34,6 +34,15 @@ class ProjectInput {
     this.attach()
   }
 
+  private submitHandler(event: Event) {
+    event.preventDefault()
+    console.log(this.titleInputElement.value)
+  }
+
+  private configure() {
+    this.element.addEventListener('submit', this.submitHandler.bind(this))
+  }
+
   private attach() {
     this.hostElement.insertAdjacentElement('afterbegin', this.element)
   }
