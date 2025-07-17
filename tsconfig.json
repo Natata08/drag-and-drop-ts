@@ -22,7 +22,8 @@
     "noUncheckedSideEffectImports": true,
 
     /* Experimental Options */
-    "experimentalDecorators": true
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
   },
   "include": ["src"]
 }
