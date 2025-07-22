@@ -4,19 +4,7 @@ import { Project, ProjectStatus } from './models/project.js'
 import { projectState } from './state/project-state.js'
 import type { Validatable } from './util/validation.js'
 import { validate } from './util/validation.js'
-
-//autobind decorator
-function autobind(_: any, _2: string, descriptor: PropertyDescriptor) {
-  const originalMethod = descriptor.value
-  const adjDescriptor: PropertyDescriptor = {
-    configurable: true,
-    get() {
-      const boundFn = originalMethod.bind(this)
-      return boundFn
-    },
-  }
-  return adjDescriptor
-}
+import { autobind } from './decorators/autobind.js'
 
 //Component Base Class
 abstract class Component<T extends HTMLElement, U extends HTMLElement> {
