@@ -1,13 +1,28 @@
+:root {
+  --color-primary: #2c3e50; 
+  --color-secondary: #3498db;
+  --color-success: #27ae60; 
+  --color-background-light: #ecf0f1;
+  --color-background-medium: #bdc3c7; 
+  --color-text-light: #f8f9fa;
+  --color-text-dark: #34495e;
+  --color-border: #bdc3c7;
+  --color-focus-background: #eaf2f8; 
+  --color-droppable-background: rgba(46, 204, 113, 0.1);
+}
+
 * {
   box-sizing: border-box;
 }
 
 html {
   font-family: sans-serif;
+  color: var(--color-text-dark);
 }
 
 body {
   margin: 0;
+  background: var(--color-background-light);
 }
 
 label,
@@ -27,41 +42,42 @@ textarea {
   padding: 0.2rem 0.4rem;
   width: 100%;
   max-width: 30rem;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  transition: background-color 0.2s, border-color 0.2s;
 }
 
 input:focus,
 textarea:focus {
   outline: none;
-  background: #fff5f9;
+  background: var(--color-focus-background);
+  border-color: var(--color-secondary);
 }
 
 button {
   font: inherit;
-  background: #ff0062;
-  border: 1px solid #ff0062;
+  background: var(--color-primary);
+  color: var(--color-text-light);
+  border: 1px solid var(--color-primary);
   cursor: pointer;
-  color: white;
   padding: 0.75rem 1rem;
-}
-
-button:focus {
-  outline: none;
+  border-radius: 4px;
+  transition: background-color 0.2s, border-color 0.2s;
 }
 
 button:hover,
 button:active {
-  background: #a80041;
-  border-color: #a80041;
+  background: var(--color-secondary);
+  border-color: var(--color-secondary);
 }
 
 .projects {
   margin: 1rem;
-  border: 1px solid #ff0062;
+  border: 1px solid var(--color-border);
 }
 
 .projects header {
-  background: #ff0062;
+  background: var(--color-primary);
   height: 3.5rem;
   display: flex;
   justify-content: center;
@@ -69,16 +85,16 @@ button:active {
 }
 
 #finished-projects {
-  border-color: #0044ff;
+  border-color: var(--color-success);
 }
 
 #finished-projects header {
-  background: #0044ff;
+  background: var(--color-success);
 }
 
 .projects h2 {
   margin: 0;
-  color: white;
+  color: var(--color-text-light);
 }
 
 .projects ul {
@@ -91,20 +107,20 @@ button:active {
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.26);
   padding: 1rem;
   margin: 1rem;
-  background: white;
+  background: #ffffff;
 }
 
 .projects li h2 {
-  color: #ff0062;
+  color: var(--color-primary);
   margin: 0.5rem 0;
 }
 
 #finished-projects li h2 {
-  color: #0044ff;
+  color: var(--color-success);
 }
 
 .projects li h3 {
-  color: #575757;
+  color: var(--color-text-dark);
   font-size: 1rem;
 }
 
@@ -113,16 +129,17 @@ button:active {
 }
 
 .droppable {
-  background: #ffe3ee;
+  background: var(--color-droppable-background) !important;
 }
 
 #finished-projects .droppable {
-  background: #d6e1ff;
+  background: var(--color-droppable-background) !important;
 }
 
 #user-input {
   margin: 1rem;
   padding: 1rem;
-  border: 1px solid #ff0062;
-  background: #f7f7f7;
+  border: 1px solid var(--color-border);
+  background: #ffffff;
+  border-radius: 8px;
 }
