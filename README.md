@@ -2,6 +2,8 @@
 
 This is a simple project management tool built with TypeScript that allows you to manage your projects in "Active" and "Finished" categories. It features a drag-and-drop interface to move projects between these two states.
 
+[Link to Live Demo](https://natata08.github.io/drag-and-drop-ts/)
+
 ## Features
 
 - Create new projects with a title, description, and number of people.
